@@ -8,7 +8,7 @@ export async function fetchProperties({ showFeatured = false } = {}) {
     }
     const res = await fetch(
       `${apiDomain}/properties${showFeatured ? "/featured" : ""}`,
-      { cache: "no-store" }
+      { next: { revalidate: 40 } } // Revalidate data every 40 seconds
     );
     if (!res.ok) {
       throw new Error("Failed to fetch data");
