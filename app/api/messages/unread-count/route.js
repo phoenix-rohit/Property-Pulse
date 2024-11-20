@@ -2,6 +2,8 @@ import connectDB from "@/config/connectDB";
 import Message from "@/models/Message";
 import { getSessionUser } from "@/utils/getSessionUser";
 
+export const dynamic = "force-dynamic";
+
 // GET /api/messages/unread-count
 export async function GET(req) {
   try {

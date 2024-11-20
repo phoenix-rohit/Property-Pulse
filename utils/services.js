@@ -24,7 +24,7 @@ export async function fetchProperty(id) {
   try {
     // Handle the case where the domain is not available yet
     if (!apiDomain) {
-      return null;
+      return [];
     }
     const res = await fetch(`${apiDomain}/properties/${id}`);
     if (!res.ok) {

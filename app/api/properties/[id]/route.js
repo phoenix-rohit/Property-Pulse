@@ -2,7 +2,6 @@ import connectDB from "@/config/connectDB";
 import Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 
-// TO USE GET we simply name it GET and method will become GET HTTP method
 // GET /api/properties/:id
 export async function GET(req, { params }) {
   try {
